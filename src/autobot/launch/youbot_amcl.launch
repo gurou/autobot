@@ -1,5 +1,4 @@
 <launch>
-
   <param name="use_sim_time" value="false" />
   
   <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE 
@@ -13,6 +12,6 @@
   <include file="$(find autobot)/launch/move_base.launch" />
 
   <!-- Fire up AMCL -->
-  <include file="$(find autobot)/launch/youbot_amcl.launch" />
+  <include file="$(find autobot)/launch/amcl.launch" />
   
 </launch>
