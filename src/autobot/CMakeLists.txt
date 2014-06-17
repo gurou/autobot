@@ -111,6 +111,8 @@ include_directories(
 ## Declare a cpp executable
 # Added by Guru: Start
 add_executable(autobot_node src/autobot_node.cpp)
+add_executable(tf_broadcaster src/tf_broadcaster.cpp)
+add_executable(tf_listener src/tf_listener.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -118,6 +120,14 @@ add_executable(autobot_node src/autobot_node.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(autobot_node
+   ${catkin_LIBRARIES}
+)
+
+target_link_libraries(tf_broadcaster
+   ${catkin_LIBRARIES}
+)
+
+target_link_libraries(tf_listener
    ${catkin_LIBRARIES}
 )
 

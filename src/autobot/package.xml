@@ -54,7 +54,7 @@
 
   <!-- Added by Guru: Start -->
   <run_depend>move_base_msgs</run_depend>
-  <run_depend>ctionlib</run_depend>
+  <run_depend>actionlib</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>tf</run_depend>
   <!-- Added by Guru: End -->
