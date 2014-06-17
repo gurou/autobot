@@ -26,7 +26,9 @@ int main(int argc, char** argv)
         xCoordinate = boost::lexical_cast<float>( argv[1] );
       }
       catch( boost::bad_lexical_cast const& ) {
-        std::cout << "Error: input string was not valid" << std::endl;
+        cout << "Error: input string was not valid" << std::endl;
+        cout << "Cannot send goal to YouBot";
+        return 0;
       }
     }
 
