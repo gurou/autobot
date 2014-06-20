@@ -10,8 +10,8 @@
  * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  *
  * File Name     : tf_broadcaster.cpp
- * Author        : Guru, Julian
  * Created on    : Jun 16, 2014
+ * Author        : Guru, Julian, Andreas
  * Supervised by : Prof. Dr. Wolfgang Schittenhelm
  *
  * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -60,8 +60,8 @@ int main(int argc, char** argv)
     broadcaster.sendTransform(
         tf::StampedTransform(
             tf::Transform(
-                tf::Quaternion(0, 0, 0, 1), tf::Vector3(0.1, 0.0, 0.2)
-            ), ros::Time::now(), "base_link", "base_laser"
+                tf::Quaternion(0, 0, 0, 1), tf::Vector3(-0.35, 0.0, 0.85)
+            ), ros::Time::now(), "base_footprint", "camera_link"
         )
     );
     r.sleep();

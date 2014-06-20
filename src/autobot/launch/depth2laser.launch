@@ -1,12 +1,17 @@
+<?xml version="1.0"?>
 <launch>
-  <!-- Launch the OpenNI drivers -->
-  <include file="$(find autobot)/launch/openni_node.launch" />
+    <param name="/use_sim_time" value="false" />
 
-  <!-- Run the depthimage_to_laserscan node -->
-  <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" output="screen">
-    <remap from="image" to="/camera/depth/image_raw" />
-    <remap from="camera_info" to="/camera/depth/camera_info" />
-    <remap from="scan" to="/scan" />
-</node>
+    <!-- Launch the OpenNI drivers -->
+    <include file="$(find autobot)/launch/openni_node.launch" />
 
+    <!-- Run the depthimage_to_laserscan node -->
+    <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" output="screen">
+        <remap from="image" to="/camera/depth/image_raw" />
+        <remap from="camera_info" to="/camera/depth/camera_info" />
+        <remap from="scan" to="/scan" />
+    </node>
+
+    <!-- Run a static transform between /base_footprint and /camera_link -->
+    <node pkg="tf" type="static_transform_publisher" name="basefootprint_to_cameralink" args="-0.35 0 0.85 0 0 0 /base_footprint /camera_link 100" />
 </launch>
