@@ -13,5 +13,5 @@
     </node>
 
     <!-- Run a static transform between /base_footprint and /camera_link -->
-    <node pkg="tf" type="static_transform_publisher" name="basefootprint_to_cameralink" args="-0.35 0 0.85 0 0 0 /base_footprint /camera_link 100" />
+    <node pkg="tf" type="static_transform_publisher" name="basefootprint_to_cameralink" args="-0.30 0 0.80 0 0 0 /base_link /camera_link 100" />
 </launch>
