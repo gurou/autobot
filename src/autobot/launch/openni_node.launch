@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <!-- Entry point for using OpenNI devices -->
 <launch>
-
+  <param name="/use_sim_time" value="false" />
   <!-- "camera" should uniquely identify the device. All topics are pushed down
        into the "camera" namespace, and it is prepended to tf frame ids. -->
   <arg name="camera" default="camera" />

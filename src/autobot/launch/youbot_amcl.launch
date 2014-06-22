@@ -1,5 +1,6 @@
+<?xml version="1.0"?>
 <launch>
-  <param name="use_sim_time" value="false" />
+  <param name="/use_sim_time" value="false" />
   
   <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE 
        Can also be overridden on the command line -->
@@ -14,4 +15,5 @@
   <!-- Fire up AMCL -->
   <include file="$(find autobot)/launch/amcl.launch" />
   
+  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 100" /> -->
 </launch>

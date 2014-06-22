@@ -5,19 +5,20 @@ TrajectoryPlannerROS:
     acc_lim_th: 1.6
     max_vel_x: 0.5
     min_vel_x: 0.1
-    max_rotational_vel: 0.5
+    max_rotational_vel: 1.0
     min_in_place_rotational_vel: 0.1
     escape_vel: -0.1
     holonomic_robot: true
 
     # Goal Tolerance Parameters
-    xy_goal_tolerance: 0.1
-    yaw_goal_tolerance: 0.1
+    xy_goal_tolerance: 0.2
+    yaw_goal_tolerance: 0.2
+    meter_scoring: true
 
     # Forward Simulation Parameters
     sim_time: 1.7
     sim_granularity: 0.025
-    vx_samples: 3
+    vx_samples: 5
     vtheta_samples: 6
 
     # Trajectory Scoring Parameters
