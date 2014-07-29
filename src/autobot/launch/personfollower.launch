@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="/use_sim_time" value="false" />
+
+    <!-- Launch the OpenNI drivers -->
+    <include file="$(find autobot)/launch/openni_node.launch" />
+
+    <!-- Run a static transform between /base_footprint and /camera_link -->
+    <node pkg="tf" type="static_transform_publisher" name="basefootprint_to_cameralink" args="-0.30 0 0.90 0 0 0 /base_footprint /camera_link 100" />
+</launch>
